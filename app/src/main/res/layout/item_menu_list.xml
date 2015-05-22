@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:background="#fff"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<LinearLayout
+    android:gravity="center"
+    android:padding="16dp"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <yalantis.com.sidemenu.foodies.utils.CircularImageView
+        android:id="@+id/hotelImage"
+        android:layout_gravity="center"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:border_color="#ddd"
+        app:border_width="4dp"
+        app:shadow="false"
+        android:scaleType="centerCrop"
+        android:src="@drawable/screen"/>
+
+
+    <LinearLayout
+        android:layout_gravity="center"
+        android:layout_marginLeft="8dp"
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textStyle="bold"
+            android:id="@+id/name"
+
+            android:text="Item Name"
+            android:textSize="22sp"
+            android:textColor="#494949"
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content" />
+
+        <TextView
+
+            android:id="@+id/tagline"
+            android:text="tagline"
+            android:textSize="18sp"
+            android:textColor="#999"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+
+            android:id="@+id/price"
+
+            android:text="Price"
+
+            android:textSize="22sp"
+            android:textColor="#494949"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_marginTop="4dp"
+
+
+            android:text="Amount"
+
+            android:textSize="14sp"
+            android:textColor="#999"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#ccc"/>
+</LinearLayout>

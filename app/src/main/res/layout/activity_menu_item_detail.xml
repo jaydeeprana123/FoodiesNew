@@ -1,0 +1,160 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eee"
+
+    >
+
+    <include layout="@layout/app_bar"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+<ScrollView
+    android:layout_above="@+id/addToCart"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <TextView
+        android:layout_marginTop="16dp"
+        android:id="@+id/name"
+        android:gravity="center"
+        android:text="Item Name"
+        android:textSize="22sp"
+        android:textColor="#494949"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:id="@+id/tagline"
+        android:text="tagline"
+        android:textSize="18sp"
+        android:textColor="#999"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:id="@+id/cuisine"
+            android:text="cuisine"
+            android:textSize="18sp"
+            android:textColor="#999"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:paddingLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+
+            android:text="My Food Diet"
+            android:textSize="14sp"
+            android:textColor="#494949"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Spinner
+            android:spinnerMode="dialog"
+
+            android:textColorHint="#000"
+            android:textColor="#000"
+            android:id="@+id/spinnerFoodDietType"
+            android:textSize="24sp"
+            android:layout_margin="16dp"
+
+            android:background="#fff"
+            android:layout_gravity="center"
+            android:hint="Select City"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/remove"
+                android:padding="4dp"
+                android:layout_marginRight="2dp"
+                android:background="#fff"
+                android:src="@drawable/ic_remove"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/quantity"
+                android:textColor="#494949"
+                android:padding="4dp"
+                android:gravity="center"
+                android:text="Quantity"
+                android:textSize="18sp"
+                android:background="#fff"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+            <ImageView
+                android:id="@+id/add"
+                android:padding="4dp"
+                android:layout_marginLeft="2dp"
+
+                android:background="#fff"
+                android:src="@drawable/ic_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:paddingTop="16dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="#494949"
+                android:gravity="center"
+
+                android:text="Total"
+                android:textSize="18sp"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+
+                android:id="@+id/price"
+                android:textColor="@color/primaryColor"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:text="₹ 120"
+                android:textSize="28sp"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
+    <TextView
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:id="@+id/addToCart"
+        android:textColor="#fff"
+        android:textSize="22sp"
+        android:text="ADD TO CART"
+        android:gravity="center"
+        android:padding="16dp"
+        android:background="@color/primaryColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    </RelativeLayout>
+</LinearLayout>

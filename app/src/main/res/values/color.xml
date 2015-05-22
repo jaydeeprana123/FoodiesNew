@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <color name="primaryColor">#259b24</color>
+    <color name="primaryColorDark">#259b24</color>
+
+    <color name="indicator_1">#ffeb3b</color>
+    <color name="indicator_2">#ffc107</color>
+    <color name="indicator_3">#ff9800</color>
+    <color name="indicator_4">#ff5722</color>
+</resources>

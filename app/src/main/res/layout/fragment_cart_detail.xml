@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="#fff"
+    android:layout_height="match_parent">
+
+
+    <ScrollView
+        android:layout_above="@+id/btnDeliveryType"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:paddingBottom="16dp"
+                android:textStyle="bold"
+                android:paddingLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:text="YOUR ORDER"
+                android:textSize="18sp"
+                android:textColor="#eb5c32"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+           <LinearLayout
+               android:id="@+id/addOrderLayout"
+               android:orientation="vertical"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+
+           </LinearLayout>
+
+
+<View
+    android:background="#ccc"
+    android:layout_width="match_parent"
+    android:layout_height="2dp"/>
+
+            <LinearLayout
+             android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="#494949"
+                    android:textSize="18sp"
+                    android:text="Subtotal"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/subtotal"
+                    android:textColor="#494949"
+                    android:textSize="20sp"
+
+                    android:text="Rs. 500"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+<View
+    android:layout_marginRight="16dp"
+    android:layout_marginLeft="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:background="#ccc"
+    />
+            <LinearLayout
+                android:textColor="#494949"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+
+                    android:textColor="#494949"
+                    android:textSize="18sp"
+                    android:text="TAX( 5% )"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textColor="#494949"
+                    android:textSize="20sp"
+                    android:id="@+id/tax"
+                    android:text="Rs. 25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <View
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#ccc"
+                android:layout_weight="1"/>
+            <LinearLayout
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="#494949"
+                    android:textSize="18sp"
+                    android:text="Delivery Fee"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textColor="#494949"
+                    android:textSize="20sp"
+
+                    android:text="Free"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <View
+         android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#ccc"
+            android:layout_weight="1"/>
+            <LinearLayout
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="32dp"
+                android:paddingTop="8dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="#494949"
+                    android:textSize="18sp"
+                    android:text="Total"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/totalBottom"
+                    android:textColor="#494949"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:text="Rs. 525"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+<TextView
+    android:id="@+id/btnDeliveryType"
+    android:padding="10dp"
+    android:textSize="18sp"
+    android:layout_alignParentBottom="true"
+    android:gravity="center"
+    android:textColor="#fff"
+    android:text="Choose Delivery Type"
+    android:drawableRight="@drawable/ic_forward"
+    android:background="@color/indicator_4"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />
+
+</RelativeLayout>
