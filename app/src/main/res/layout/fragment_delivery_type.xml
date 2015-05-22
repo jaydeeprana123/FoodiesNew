@@ -25,16 +25,15 @@
             android:layout_height="wrap_content" />
 
         <RadioGroup
+            android:checkedButton="@+id/radioPickup"
             android:padding="16dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-
-
             <RadioButton
+                android:id="@+id/radioDelivery"
                 android:padding="8dp"
                 android:layout_marginBottom="8dp"
-
                 android:textSize="20sp"
                 android:text="Deliver"
                 android:layout_width="match_parent"
@@ -45,6 +44,7 @@
                 android:layout_height="1dp"
                 android:background="#ccc"/>
             <RadioButton
+                android:id="@+id/radioPickup"
                 android:layout_marginBottom="8dp"
                 android:padding="8dp"
                 android:layout_marginTop="8dp"
@@ -52,14 +52,9 @@
                 android:text="Pickup"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
-
         </RadioGroup>
-
-
     </LinearLayout>
 </ScrollView>
-
-
     <TextView
         android:id="@+id/btnUSerDetail"
         android:padding="10dp"
@@ -72,5 +67,4 @@
         android:background="@color/indicator_4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
-
 </RelativeLayout>

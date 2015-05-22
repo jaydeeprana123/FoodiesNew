@@ -34,18 +34,15 @@ public class PaymentTypeFragment extends Fragment {
     private SubmitOrder submitOrder;
     private ProgressDialog progressDialog;
     private TextView btnMakePayment;
+
     public static PaymentTypeFragment newInstance() {
         PaymentTypeFragment fragment = new PaymentTypeFragment();
-
-
         return fragment;
     }
-
 
     public PaymentTypeFragment() {
         // Required empty public constructor
     }
-
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -53,27 +50,26 @@ public class PaymentTypeFragment extends Fragment {
         submitOrder=PrefUtils.getCartItems(getActivity());
     }
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+
         convertView= inflater.inflate(R.layout.fragment_payment_type, container, false);
+        submitOrder.PaymentTypeId= AppConstants.CASH_ON_DELIVERY+"";
         btnMakePayment= (TextView) convertView.findViewById(R.id.btnMakePayment);
         btnMakePayment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 //                Toast.makeText(getActivity(),"Thanks, Your Order Submitted Successfully",Toast.LENGTH_LONG).show();
                 checkOutOrdered();
-
-
 //                Log.e("first name.........454",submitOrder.CustomerLastName+"");
 //                Log.e("last name...........54",submitOrder.CustomerLastName+"");
 
             }
         });
         rgPaymentType= (RadioGroup) convertView.findViewById(R.id.rgPaymentType);
-        rgPaymentType.check(0);
+
         rgPaymentType.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
@@ -105,8 +101,6 @@ public class PaymentTypeFragment extends Fragment {
         return convertView;
     }
 
-
-
     private void checkOutOrdered() {
         progressDialog=new ProgressDialog(getActivity());
         progressDialog.setMessage("Loading...");
@@ -130,7 +124,6 @@ public class PaymentTypeFragment extends Fragment {
 
             object.put("CustomerFirstName",submitOrder.CustomerFirstName);
             object.put("CustomerLastName",submitOrder.CustomerLastName);
-
             object.put("DeliveryArea",submitOrder.DeliveryArea+"");
             object.put("DeliveryCity",submitOrder.DeliveryCity+"");
             object.put("DeliveryCountry",submitOrder.DeliveryCountry+"");
@@ -149,7 +142,6 @@ public class PaymentTypeFragment extends Fragment {
             }else {
                 object.put("OrderBy",submitOrder.OrderBy+"");
             }
-
             object.put("OrderDesc",submitOrder.OrderDesc+"");
 //            object.put("OrderId","");
             object.put("OrderStatus",submitOrder.OrderStatus+"");
@@ -193,6 +185,5 @@ public class PaymentTypeFragment extends Fragment {
             }
         }.call();
     }
-
 
 }

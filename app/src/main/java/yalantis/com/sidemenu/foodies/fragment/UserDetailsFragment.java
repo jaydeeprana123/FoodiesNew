@@ -67,6 +67,14 @@ public class UserDetailsFragment extends Fragment {
             etFirstName.setText(loginClass.FName);
             etLastName.setText(loginClass.LName);
             etEmail.setText(loginClass.loginObject.EmailAddress);
+
+            btnLogin.setText("Logout");
+
+        }
+
+        else {
+
+            btnLogin.setText("Login");
         }
     }
 
@@ -78,18 +86,66 @@ public class UserDetailsFragment extends Fragment {
         btnPaymentType= (TextView) convertView.findViewById(R.id.btnPaymentType);
         loginClass=PrefUtils.getLogin(getActivity());
         btnLogin= (TextView) convertView.findViewById(R.id.btnLogin);
+
+
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(loginClass !=null) {
 
-                    Toast.makeText(getActivity(),"Already Login",Toast.LENGTH_LONG).show();
-                } else {
-                    Intent i =new Intent(getActivity(), LoginActivity.class);
-                    startActivity(i);
+                if (loginClass != null){
+
+                    btnLogin.setText("Login");
+
+                    PrefUtils.clearLogin(getActivity());
+
+                    etFirstName.setText("");
+                    etLastName.setText("");
+                    etEmail.setText("");
+
+                    loginClass = null;
                 }
+
+                else {
+                 //   btnLogin.setText("Logout");
+
+                    Intent it = new Intent(getActivity(), LoginActivity.class);
+              startActivity(it);
+                }
+
+//                Intent it = new Intent(getActivity(), LoginActivity.class);
+//                startActivity(it);
             }
         });
+
+//        if(loginClass !=null) {
+//
+//            btnLogin.setText("Logout");
+//
+//            btnLogin.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//
+//                    Intent it = new Intent(getActivity(), LoginActivity.class);
+//                    startActivity(it);
+//
+//                }
+//            });
+//            Toast.makeText(getActivity(),"Already Login",Toast.LENGTH_LONG).show();
+//        }
+
+//        btnLogin.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                if(loginClass !=null) {
+//
+//                    Toast.makeText(getActivity(),"Already Login",Toast.LENGTH_LONG).show();
+//                }
+//                else {
+//                    Intent i =new Intent(getActivity(), LoginActivity.class);
+//                    startActivity(i);
+//                }
+//            }
+//        });
         etFirstName= (EditText) convertView.findViewById(R.id.etFirstName);
         etLastName= (EditText) convertView.findViewById(R.id.etLastName);
         etEmail= (EditText) convertView.findViewById(R.id.etEmail);

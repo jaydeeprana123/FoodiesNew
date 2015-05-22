@@ -25,6 +25,7 @@
                 android:layout_height="wrap_content" />
 
             <RadioGroup
+                android:checkedButton="@+id/cod"
                 android:id="@+id/rgPaymentType"
                 android:padding="16dp"
                 android:layout_width="match_parent"

@@ -26,7 +26,7 @@ public class PrefUtils {
 
         SharedPreferences  preferences = PreferenceManager.getDefaultSharedPreferences(ctx);
 
-        String area=preferences.getString("selectedArea","");
+        String area=preferences.getString("selectedArea", "");
         return  area;
     }
 
@@ -96,6 +96,12 @@ public class PrefUtils {
 
     public static void clearCart( Context ctx){
         ComplexPreferences complexPreferences = ComplexPreferences.getComplexPreferences(ctx, "cart_pref", 0);
+        complexPreferences.clearObject();
+        complexPreferences.commit();
+    }
+
+    public static void clearLogin( Context ctx){
+        ComplexPreferences complexPreferences = ComplexPreferences.getComplexPreferences(ctx, "login_pref", 0);
         complexPreferences.clearObject();
         complexPreferences.commit();
     }
