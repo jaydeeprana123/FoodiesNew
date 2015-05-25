@@ -50,10 +50,10 @@ public class FragmentRatings extends Fragment implements ScreenShotable {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_history, container, false);
-        mImageView = (ImageView) rootView.findViewById(R.id.image_content);
+        mImageView = (ImageView) rootView.findViewById(R.id.image_fragment_histor);
         mImageView.setClickable(true);
         mImageView.setFocusable(true);
-        mImageView.setImageResource(res);
+      //  mImageView.setImageResource(res);
         return rootView;
     }
 

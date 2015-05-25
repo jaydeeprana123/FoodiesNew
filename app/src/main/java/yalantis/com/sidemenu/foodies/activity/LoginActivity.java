@@ -1,6 +1,7 @@
 package yalantis.com.sidemenu.foodies.activity;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -25,23 +26,37 @@ import yalantis.com.sidemenu.sample.R;
 public class LoginActivity extends ActionBarActivity {
 
     private ProgressDialog progressDialog;
-    private TextView btnLogin;
+    private TextView btnLogin, btnSignUp;
     private EditText etEmail,etPassword;
     private Toolbar toolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
         btnLogin= (TextView) findViewById(R.id.btnLogin);
+        btnSignUp = (TextView) findViewById(R.id.btnSignUp);
+
         etEmail= (EditText) findViewById(R.id.etEmail);
         etPassword= (EditText) findViewById(R.id.etPassword);
         etEmail.setText("nirav@gmail.com");
         etPassword.setText("123456");
         setToolbar();
+
+        btnSignUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent it = new Intent(getApplicationContext(), SignupActivity.class);
+                startActivity(it);
+            }
+        });
+
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 callLoginService();
+
             }
         });
     }

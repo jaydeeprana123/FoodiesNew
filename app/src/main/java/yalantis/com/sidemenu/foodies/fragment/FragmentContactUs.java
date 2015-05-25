@@ -50,10 +50,10 @@ public class FragmentContactUs extends Fragment implements ScreenShotable {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_contact_us, container, false);
-        mImageView = (ImageView) rootView.findViewById(R.id.image_content);
+        mImageView = (ImageView) rootView.findViewById(R.id.image_content1);
         mImageView.setClickable(true);
         mImageView.setFocusable(true);
-        mImageView.setImageResource(res);
+      //  mImageView.setImageResource(res);
 //        Toast.makeText(getActivity(), "content fragment 3", Toast.LENGTH_LONG).show();
         return rootView;
     }

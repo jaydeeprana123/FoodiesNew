@@ -108,7 +108,7 @@ public class HistoryFragment extends Fragment implements ScreenShotable {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_history, container, false);
 //        mImageView = (ImageView) rootView.findViewById(R.id.image_content);
-        historyList= (ListView) rootView.findViewById(R.id.historyList);
+       // historyList= (ListView) rootView.findViewById(R.id.historyList);
         if(PrefUtils.getLogin(getActivity()) != null){
 //            getHotelList();
 //            getResponseValue();

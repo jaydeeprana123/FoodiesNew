@@ -69,6 +69,8 @@ public class CitySelectionFragment extends Fragment implements ScreenShotable {
 
     private Spinner etCity,etArea;
 
+    City city1;
+
     public static CitySelectionFragment newInstance() {
         CitySelectionFragment contentFragment = new CitySelectionFragment();
         Bundle bundle = new Bundle();
@@ -88,6 +90,7 @@ public class CitySelectionFragment extends Fragment implements ScreenShotable {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         res = getArguments().getInt(Integer.class.getName());
+
 
     }
 

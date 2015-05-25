@@ -13,5 +13,6 @@
     <string name="title_activity_menu_item_detail">MenuItemDetailActivity</string>
     <string name="title_activity_cart">CartActivity</string>
     <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_Signup">SignupActivity</string>
 
 </resources>
